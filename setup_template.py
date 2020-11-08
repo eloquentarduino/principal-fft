@@ -9,7 +9,7 @@ setup(
   author = 'Simone Salerno',
   author_email = 'eloquentarduino@gmail.com',
   url = 'https://github.com/eloquentarduino/principal-fft',
-download_url = 'https://github.com/eloquentarduino/principal-fft/dist/principal-fft-VERSION.tar.gz',
+download_url = 'https://github.com/eloquentarduino/principal-fft/dist/VERSION.tar.gz',
   keywords = [
     'ML',
     'sklearn',
