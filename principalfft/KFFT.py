@@ -20,7 +20,7 @@ class KFFT:
         :param y: input target
         :return: self
         """
-        Xfft = rfft(X)
+        Xfft = np.abs(rfft(X))
         self.feature_selector.fit(Xfft, y)
         self.original_size = len(X[0])
         self.idx = self.get_idx()
