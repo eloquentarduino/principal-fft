@@ -33,7 +33,7 @@ class KFFT:
         :return: transformed data
         """
         assert self.idx is not None, "KFFT instance not fitted"
-        return rfft(X)[:, self.idx]
+        return np.abs(rfft(X)[:, self.idx])
 
     def fit_transform(self, X, y):
         """
@@ -51,9 +51,9 @@ class KFFT:
         :return:
         """
         if isinstance(self.feature_selector, SelectKBest):
-            idx = (-self.kbest.scores_).argsort()[:self.k]
+            idx = (-self.feature_selector.scores_).argsort()[:self.feature_selector.k]
             return np.sort(idx)
         if isinstance(self.feature_selector, RFE):
-            idx = self.rfe.ranking_.argsort()[:self.k]
+            idx = self.feature_selector.ranking_.argsort()[:self.feature_selector.n_features_to_select]
             return np.sort(idx)
         raise RuntimeError('Unknown feature extractor')

@@ -3,13 +3,13 @@ from distutils.core import setup
 setup(
   name = 'principal-fft',
   packages = ['principalfft'],
-  version = '1.0.4',
+  version = '1.0.5',
   license='MIT',
   description = 'Extract principal FFT components for features generation',
   author = 'Simone Salerno',
   author_email = 'eloquentarduino@gmail.com',
   url = 'https://github.com/eloquentarduino/principal-fft',
-download_url = 'https://github.com/eloquentarduino/principal-fft/dist/1.0.4.tar.gz',
+download_url = 'https://github.com/eloquentarduino/principal-fft/dist/1.0.5.tar.gz',
   keywords = [
     'ML',
     'sklearn',
