@@ -1,4 +1,4 @@
-dist
 venv
 publish
 .idea
+setup_template.py
